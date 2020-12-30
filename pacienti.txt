@@ -1,0 +1,10 @@
+1 Popa_Elena F 18 Acrofobie 6
+2 Radu_Alexandru M 2 Autism 5
+3 Ionescu_Gabriel M 52 Tulburare_bipolara 3
+4 Dumitru_Ionut M 32 Distimie 5
+5 Stan_Aurelia F 15 Sindromul_Stockholm 3
+6 Rusu_Mihai M 26 Narcolepsie 6
+7 Constantin_Darius M 65 Sindromul_de_stres_posttraumatic 4
+8 Toma_Ioana F 16 Tulburare_de_anxietate_generalizata 1
+9 Dinu_Victor M 47 Tulburare_obsesiv-compulsiva 3
+10 Muresan_Otilia F 17 Tulburare_reactiva_de_atasament 1
