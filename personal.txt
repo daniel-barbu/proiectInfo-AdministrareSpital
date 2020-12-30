@@ -1,6 +1,6 @@
-1 Stefan_Nicolau M 96 Medic_dermatolog 9
-2 Alfred_Teitel M 80 Medic_farmacolog 7
-3 Nandor_Gingold M 81 Medic_hematolog 7
-4 Alexandru_Bucur M 65 Medic_dentar 8
-5 Victor_Babes M 72 Medic_morfopatolog 2
-6 Liliana_Padure F 62 Medic_ortoped 6
+1 Stefan_Nicolau M 26 Medic_psihiatru 5
+2 Alfred_Teitel M 32 Farmacist 4
+3 Nandor_Gingold M 61 Medic_psihiatru 4
+4 Alexandru_Bucur M 65 Medic_psihoterapeut 2
+5 Doru_Maior M 47 Psiholog 1
+6 Liliana_Padure F 62 Psiholog 3
