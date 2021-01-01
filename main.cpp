@@ -27,7 +27,7 @@ int accesStructPoz(int oc, char strIn[]) {
 	return i;
 }
 
-int afis() {
+void afis() {
   int x, id; string str; char strChar[101];
   system("cls"); SetConsoleTitle("/main()/afis()");
   cout << "1 - Personal" << endl << "2 - Pacienti" << endl;
@@ -58,7 +58,7 @@ int afis() {
   fin.close(); system("pause");
 }
 
-int modifica() {
+void modifica() {
   int x, id; string str, y, fileTemp="", charArrStr; char charArr[101];
   system("cls"); SetConsoleTitle("/main()/modifica()");
   cout << "1 - Personal, dupa ID" << endl << "2 - Pacienti, dupa ID" << endl;
@@ -86,7 +86,7 @@ int modifica() {
       else cout << "Nu exista personal cu acest ID" << endl;
 
       fileTemp=fileTemp+to_string(x)+charArrStr+"\n";
-      while (fin >> x) {getline(fin, str); fileTemp=fileTemp+to_string(x)+str+'\n';}
+      while (fin >> x) {getline(fin, str); fileTemp=fileTemp+to_string(x)+str+"\n";}
       fin.close(); fout.open("personal.txt"); fout << fileTemp.substr(0, fileTemp.length()-2);
       break;}
     case 2: {
@@ -111,7 +111,7 @@ int modifica() {
       else cout << "Nu exista pacient cu acest ID" << endl;
 
       fileTemp=fileTemp+to_string(x)+charArrStr+"\n";
-      while (fin >> x) {getline(fin, str); fileTemp=fileTemp+to_string(x)+str+'\n';}
+      while (fin >> x) {getline(fin, str); fileTemp=fileTemp+to_string(x)+str+"\n";}
       fin.close(); fout.open("pacienti.txt"); fout << fileTemp.substr(0, fileTemp.length()-2);
       break;}
     default: modifica(); break;
@@ -119,7 +119,7 @@ int modifica() {
   fout.close(); system("pause");
 }
 
-int adauga() {
+void adauga() {
   int y; string x, str;
   system("cls"); SetConsoleTitle("/main()/adauga()");
   cout << "1 - Personal" << endl << "2 - Pacienti" << endl;
@@ -154,6 +154,25 @@ int adauga() {
   fout.close(); system("pause");
 }
 
+void sterge() {
+  int id, x; string str, fileTemp, titlu, file, noId;
+  system("cls"); SetConsoleTitle("/main()/sterge()");
+  cout << "1 - Personal, dupa ID" << endl << "2 - Pacienti, dupa ID" << endl;
+  int i; cin >> i; system("cls");
+  switch (i) {
+    case 1: {SetConsoleTitle("/main()/sterge() - Personal, dupa ID"); file="personal.txt"; noId="personal"; break;}
+    case 2: {SetConsoleTitle("/main()/sterge() - Pacienti, dupa ID"); file="pacienti.txt"; noId="pacient"; break;}
+    default: sterge(); break;
+  }
+  fin.open(file); cout << "ID: "; cin >> id; system("cls");
+
+  while (fin >> x && x!=id) {getline(fin, str); fileTemp=fileTemp+to_string(x)+str+"\n";}
+  if (x!=id) cout << "Nu exista " << noId << " cu acest ID" << endl;
+  else {getline(fin, str); cout << x << str << endl; while (fin >> x) {getline(fin, str); fileTemp=fileTemp+to_string(x)+str+"\n";}}
+
+  fin.close(); fout.open(file); fout << fileTemp.substr(0, fileTemp.length()-1); fout.close(); system("pause");
+}
+
 int creditC=0;
 void credit() {
   cout << "  ____             _             _____              _       _ " << endl
@@ -170,13 +189,15 @@ void credit() {
 int main() {
   if (creditC==0) credit();
   system("cls"); SetConsoleTitle("/main()");
-  cout << "1 - Afiseaza (personal sau pacienti)" << endl;
-  cout << "2 - Modifica (personal sau pacienti)" << endl;
-  cout << "3 - Adauga (personal sau pacienti)" << endl;
+  cout << "1 - Afiseaza" << endl;
+  cout << "2 - Modifica" << endl;
+  cout << "3 - Adauga" << endl;
+  cout << "4 - Sterge" << endl;
   int i; cin >> i; switch (i) {
     case 1: afis(); break;
     case 2: modifica(); break;
     case 3: adauga(); break;
+    case 4: sterge(); break;
   }
   main();
 }
