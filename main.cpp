@@ -181,7 +181,7 @@ void credit() {
        << " |  _ < / _` | '__| '_ \\| | | | | |  | |/ _` | '_ \\| |/ _ \\| |" << endl
        << " | |_) | (_| | |  | |_) | |_| | | |__| | (_| | | | | |  __/| |" << endl
        << " |____/ \\__,_|_|  |_.__/ \\__,_| |_____/ \\__,_|_| |_|_|\\___ |_|" << endl
-       << " & Scanteie Stefan :-)" << endl << endl
+       << "                      & Scanteie Stefan :-)" << endl << endl
        << "PROIECT INFORMATICA - Administrare centru de tratament pentru bolnavi cu afectiuni psihice" << endl << "11R2, Colegiul National Bilingv \"George Cosbuc\"" << endl;
   system("pause"); creditC=1;
 }
